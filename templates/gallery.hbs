@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make_my_Plan</title>
+	<link rel = "shortcut icon" type = "image" href = "/public/images/icon.jpg">
+	<style type="text/css">
+		.navbar
+		{
+			background-color: black;
+			border-radius: 10px;
+		}
+		.navbar ul
+		{
+			overflow: auto;
+		}
+		.navbar li{
+			float: left;
+			list-style: none;
+			margin:13px 20px;
+		}
+		.navbar li a
+		{
+			padding:3px 3px;
+			text-decoration: none;
+			color: white;
+		}
+		.navbar li a:hover{color: red;}
+		.search
+		{
+			float: right;
+			color: white;
+			padding:13px 20px;
+		}
+		.navbar input
+		{
+			border:0px solid black;
+			border-radius: 8px;
+			padding: 3px 17px;
+			width: 250px;
+		}
+		.name
+		{
+			font-family: "elephant";
+			margin-top: 50px;
+			margin-left: 550px;
+			font-size: 50px;
+			text-decoration: underline;
+			color: blue;
+			text-decoration-color: grey;
+		}
+		.img1
+		{ 
+			margin-top: 100px; 
+			margin-left: 100px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img1 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img1 div
+		{
+			position: absolute;
+			margin-left: 100px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img1:hover div
+		{
+			width: 115px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img2
+		{ 
+			margin-left: 500px;
+			margin-top: -190px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img2 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img2 div
+		{
+			position: absolute;
+			margin-left: 100px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img2:hover div
+		{
+			width: 150px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img3
+		{
+			margin-left: 800px;
+			margin-top: -190px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img3 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img3 div
+		{
+			position: absolute;
+			margin-left: 160px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img3:hover div
+		{
+			width: 170px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img4
+		{
+		 	margin-left: 100px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img4 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img4 div
+		{
+			position: absolute;
+			margin-left: 100px;
+			margin-top: -130px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img4:hover div
+		{
+			width: 130px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img5
+		{
+			margin-left: 400px;
+			margin-top: -180px; 
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img5 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img5 div
+		{
+			position: absolute;
+			margin-left: 180px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img5:hover div
+		{
+			width: 120px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img6
+		{
+			margin-left: 800px;
+			margin-top: -180px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img6 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img6 div
+		{
+			position: absolute;
+			margin-left: 160px;
+			margin-top: -90px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img6:hover div
+		{
+			width: 230px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img7
+		{
+			margin-left: 100px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img7 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img7 div
+		{
+			position: absolute;
+			margin-left: 80px;
+			margin-top: -130px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img7:hover div
+		{
+			width: 160px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img8
+		{ 
+			margin-left: 400px;
+			margin-top: -180px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img8 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img8 div
+		{
+			position: absolute;
+			margin-left: 180px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img8:hover div
+		{
+			width: 150px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img9
+		{ 
+			margin-left: 800px;
+			margin-top: -200px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img9 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img9 div
+		{
+			position: absolute;
+			margin-left: 160px;
+			margin-top: -90px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img9:hover div
+		{
+			width: 180px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img10
+		{
+			margin-left: 100px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img10 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img10 div
+		{
+			position: absolute;
+			margin-left: 80px;
+			margin-top: -130px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img10:hover div
+		{
+			width: 160px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img11
+		{
+			margin-left: 400px;
+			margin-top: -180px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img11 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img11 div
+		{
+			position: absolute;
+			margin-left: 160px;
+			margin-top: -130px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img11:hover div
+		{
+			width: 180px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.img12
+		{
+			margin-left: 800px;
+			margin-top: -190px;
+			-webkit-transition: all 2s ease;
+			-moz-transition: all 2s ease;
+			-ms-transition: all 2s ease;
+			transition: all 2s ease;
+		}
+		.img12 img:hover
+		{
+			height: 250px;
+			width: 350px;
+			cursor: pointer;
+		}
+		.img12 div
+		{
+			position: absolute;
+			margin-left: 180px;
+			margin-top: -120px;
+			background:black;
+			color: white;
+			margin-bottom: 5px;
+			font-family: sans-serif;
+			opacity: 0;
+			visibility: hidden;
+			-webkit-transition: visibility 0s, opacity 0.5s linear;
+			transition: visibility 0s, opacity 0.5s linear;
+		}
+		.img12:hover div
+		{
+			width: 130px;
+			padding: 8px 15px;
+			visibility: visible;
+			opacity: 0.7;
+		}
+		.bottom
+		{
+			position: relative;
+			height:550px;
+			width:1326px;
+			border:1px solid black;
+			border-radius: 5px;
+			background-color: black;
+			margin-left: -8px;
+			font-family: "Arial";
+			color: white;
+			font-size: 20px;
+			padding-left: 20px;
+			padding-top: 40px;
+		}
+		.bottom td a
+		{
+			text-decoration: none;
+			color: white;
+		}
+		.bottom td a:hover
+		{
+			color:blue;
+		}
+		.button
+		{
+			border-radius: 15px;
+			background-color: #f4511e;
+			border: none;
+			color:#FFFFFF;
+			text-align: center;
+			font-size: 28px;
+			padding: 20px;
+			width: 200px;
+			transition: all 0.5s;
+			cursor: pointer;
+			margin: 5px;
+			margin-left: 920px;
+			font-family: "elephant"
+		}
+		.button span
+		{
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+		.button span:after
+		{
+			content: '\00bb';
+			position:absolute;
+			opacity: 0;
+			top:0;
+			right: -20px;
+			transition: 0.5s;
+		}
+		.button:hover span
+		{
+			padding-right: 25px;
+		}
+		.button:hover span:after
+		{
+			opacity: 1;
+			right: 0;
+		}
+		#myBtn 
+		{
+		  display: none;
+		  position: fixed;
+		  bottom: 20px;
+		  right: 30px;
+		  z-index: 99;
+		  font-size: 18px;
+		  border: none;
+		  outline: none;
+		  background-color: red;
+		  color: white;
+		  cursor: pointer;
+		  padding: 15px;
+		  border-radius: 4px;
+		}
+		#myBtn:hover
+		{
+		  background-color: #555;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/reviews">Reviews</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<div class="search">
+					<input type="text" name="search" placeholder="Type here to search">
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<name class="name">G<font color="grey">allery</font></name>
+	<br>
+	<div class="img1"><img src="/public/images/g1.jpg" style="border-radius: 8px;"><div>Taj Mahal, Agra</div></div>
+	<div class="img2"><img src="/public/images/g2.jpg" style="border-radius: 8px;"><div>Hawa Mahal, Jaipur</div></div>
+	<div class="img3"><img src="/public/images/g3.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Golden Temple, Punjab</div></div>
+	<br>
+	<div class="img4"><img src="/public/images/g4.jpg" style="border-radius: 8px; margin-left: 0px; margin-top: 100px;"><div>India Gate, Delhi</div></div>
+	<div class="img5"><img src="/public/images/g5.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Red Fort, Delhi</div></div>
+	<div class="img6"><img src="/public/images/g6.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Gateway Of India, Maharashtra</div></div>
+	<br>
+	<div class="img7"><img src="/public/images/g7.jpg" style="border-radius: 8px; margin-left: 0px; margin-top: 100px;"><div>White Khutch, Gujarat</div></div>
+	<div class="img8"><img src="/public/images/g8.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Vagator Beach, Goa</div></div>
+	<div class="img9"><img src="/public/images/g9.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Himalayas, Uttarakhand</div></div>
+	<br>
+	<div class="img10"><img src="/public/images/g10.jpg" style="border-radius: 8px; margin-left: 0px; margin-top: 100px;"><div>Manali, Uttarakhand</div></div>
+	<div class="img11"><img src="/public/images/g11.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Katra,Jammu & Kashmir</div></div>
+	<div class="img12"><img src="/public/images/g12.jpg" style="border-radius: 8px; margin-left: 100px;"><div>Kovalam ,Kerala</div></div>
+	<br><br><br><br>
+	<button class="button"><span>See More</span></button>
+	<hr>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		var mybutton = document.getElementById("myBtn");
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() 
+		{
+  			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+  			{
+    			mybutton.style.display = "block";
+  			} 
+  			else 
+  			{
+    			mybutton.style.display = "none";
+  			}
+		}
+		function topFunction() 
+		{
+  			document.body.scrollTop = 0;
+  			document.documentElement.scrollTop = 0;
+		}
+	</script>
+	<br>
+	<div class="bottom">
+		<table border="0px" width="800px" height="500px" cellspacing="0" bordercolor="red">
+			<tr>
+				<td><b><font color="red">ABOUT</font></b></td>
+				<td><b><font color="red">HELP</font></b></td>
+				<td><b><font color="red">POLICY</font></b></td>
+				<td><b><font color="red">SOCIAL</font></b></td>
+			</tr>
+			<tr>
+				<td><a href="/contact">Contact Us</a></td>
+				<td><a href="#">Featured</a></td>
+				<td><a href="#">Policies</a></td>
+				<td><a href="#">Facebook</a></td>
+			</tr>
+			<tr>
+				<td><a href="/home">Home</a></td>
+				<td><a href="#">Deals</a></td>
+				<td><a href="#">Terms of Use</a></td>
+				<td><a href="#">Twitter</a></td>
+			</tr>
+			<tr>
+				<td><a href="/reviews">Reviews</a></td>
+				<td><a href="#">Offers</a></td>
+				<td><a href="#">Trip Ideas</a></td>
+				<td><a href="#">YouTube</a></td>
+			</tr>
+			<tr>
+				<td><a href="/about">About Us</a></td>
+				<td><a href="#">FAQ</a></td>
+				<td><a href="#">Privacy</a></td>
+			</tr>
+			<tr>
+				<td><a href="/gallery">Gallery</a></td>
+				<td><a href="#">Report</a></td>
+				<td><a href="#">Site Map</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">My Agent</a></td>
+				<td></td>
+				<td><a href="#">EPR Compilance</a></td>
+			</tr>
+			
+		</table>
+		<table border="1px" height="500px" width="1px" cellspacing="0" bordercolor="white" style="margin-left: 820px; margin-top: -500px;"></table>
+		<table border="0px" height="300px" width="400px" cellspacing="0" bordercolor="white" style="margin-left: 860px; margin-top: -480px;">
+			<tr><td>
+			<b><font color="red">Registered Office Address</font></b><br><br>
+				MakeMyPlan Private Limited,<br>
+				Buildings Alyssa, Begonia &<br>
+				Clove Embassy Tech Village,<br>
+				Outer Ring Road, Devarabeesanhali Village,<br>
+				Bengaluru, India<br>
+				CIN: D45678TH2021THB765992<br>
+				Telephone:<font color="blue"><b>1800 497 5678</b></font><br><br><br><br>
+				2010-2021 MakeMyPlan.com
+			</td></tr> 
+		</table>
+	</div>
+
+	
+
+</body>
+</html>

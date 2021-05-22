@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make_my_Plan/reviews.com</title>
+	<link rel = "shortcut icon" type = "image" href = "/public/images/icon.jpg">
+	{{!-- <link rel="stylesheet" type="text/css" href="reviews.css"> --}}
+</head>
+<style>
+ .navbar
+{
+	background-color: black;
+	border-radius: 10px;
+}
+.navbar ul
+{
+	overflow: auto;
+}
+.navbar li{
+	float: left;
+	list-style: none;
+	margin:13px 20px;
+}
+.navbar li a
+{
+	padding:3px 3px;
+	text-decoration: none;
+	color: white;
+}
+.navbar li a:hover{color: red;}
+.search
+{
+	float: right;
+	color: white;
+	padding:13px 20px;
+}
+.navbar input
+{
+	border:0px solid black;
+	border-radius: 8px;
+	padding: 3px 17px;
+	width: 250px;
+}
+.name
+{
+	font-family: "elephant";
+	margin-top: 50px;
+	margin-left: 550px;
+	font-size: 50px;
+	text-decoration: underline;
+	color: blue;
+	text-decoration-color: grey;
+}
+.box1
+{
+	border:1px solid lightgrey;
+	background-color: lightgrey;
+	border-radius: 15px;
+	height: 400px;
+	width: 400px;
+	margin-left: 100px;
+	margin-top: 100px;
+}
+.box2
+{
+	border:1px solid lightgrey;
+	background-color: lightgrey;
+	border-radius: 15px;
+	height: 400px;
+	width: 420px;
+	margin-left: 800px;
+	margin-top: -400px;
+}
+.box3
+{
+	border:1px solid lightgrey;
+	background-color: lightgrey;
+	border-radius: 15px;
+	height: 400px;
+	width: 400px;
+	margin-left: 450px;
+	margin-top: 100px;
+	font-size: 20px;
+}
+.con
+{
+	margin-left: 180px;
+	margin-top: -120px;
+	text-align: justify;
+	font-family: "calibri";
+	font-size: 25px;
+	font-weight: bold;
+}
+.rev
+{
+	font-size: 20px;
+	color: red;
+	margin-left: 20px;
+	margin-top: 5px;
+	text-align: justify;
+}
+.bottom
+{
+	position: relative;
+	height:550px;
+	width:1326px;
+	border:1px solid black;
+	border-radius: 5px;
+	background-color: black;
+	margin-left: -8px;
+	font-family: "Arial";
+	color: white;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 40px;
+}
+.bottom td a
+{
+	text-decoration: none;
+	color: white;
+}
+.bottom td a:hover
+{
+	color:blue;
+}
+#myBtn 
+{
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+#myBtn:hover
+{
+  background-color: #555;
+}
+
+</style>
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/reviews">Reviews</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<div class="search">
+					<input type="text" name="search" placeholder="Type here to search">
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<name class="name">R<font color="grey">eviews</font></name>
+	<div class="box1">
+		<img src="/public/images/r1.jpg" height="150px" width="150px" style="border-radius: 100px; margin-left: 15px;margin-top: 13px;">
+		<div class="con">Puneet Modi<br>Manager,<br>Sharma&nbsp&&nbspSons.cop,<br>Gujarat</div>
+		<br>
+		<hr>
+		<div class="rev">It was a great pleasure us. I would like<br>to thank a many times MakeMyPlan for<br>their friendly behaviour and so much<br>help and guidance all throughout the trip.<br>Thanks to whole team for suggesting us the<br>right places to visit.</div>
+	</div>
+	<div class="box2">
+		<img src="/public/images/r3.jpg" height="150px" width="150px" style="border-radius: 100px; margin-left: 15px;margin-top: 13px;">
+		<div class="con">Jatin Jain<br>Model,<br>Fashion&nbspStudio,<br>Delhi</div>
+		<br>
+		<hr>
+		<div class="rev">Many thanks for your effort. I am sure<br>for my coming trips I will be consulting<br>MakeMyPlan only. I was very pleased<br>with your professionalization. Overall<br>services of website are highly satisfying.</div>
+	</div>
+	<div class="box3">
+		<img src="/public/images/r2.jpg" height="150px" width="150px" style="border-radius: 100px; margin-left: 15px;margin-top: 15px;">
+		<div class="con">Shruti Nair<br>Marketing Analyst,<br>Nair & Rao firms,<br>Tamil Nadu</div>
+		<br>
+		<hr>
+		<div class="rev">The telephone customer service team was<br>very supportive. MakeMyPlan was very<br>helpful and patient in handling all<br>queries. Hats off to whole team. Thanks<br>a lot for all your effort.</div>
+	</div>
+	<br>
+	<img src="/public/images/6.jpg" style="margin-left: 70px" height="300" width="400">
+	<img src="/public/images/10.jpg" height="300" width="400" style="margin-left: -5px;">
+	<img src="/public/images/9.jpg" height="300" width="400" style="margin-left: -5px;">
+	<hr>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+	<script>
+		var mybutton = document.getElementById("myBtn");
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() 
+		{
+  			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+  			{
+    			mybutton.style.display = "block";
+  			} 
+  			else 
+  			{
+    			mybutton.style.display = "none";
+  			}
+		}
+		function topFunction() 
+		{
+  			document.body.scrollTop = 0;
+  			document.documentElement.scrollTop = 0;
+		}
+	</script>
+	<br>
+	<div class="bottom">
+		<table border="0px" width="800px" height="500px" cellspacing="0" bordercolor="red">
+			<tr>
+				<td><b><font color="red">ABOUT</font></b></td>
+				<td><b><font color="red">HELP</font></b></td>
+				<td><b><font color="red">POLICY</font></b></td>
+				<td><b><font color="red">SOCIAL</font></b></td>
+			</tr>
+			<tr>
+				<td><a href="/contact">Contact Us</a></td>
+				<td><a href="#">Featured</a></td>
+				<td><a href="#">Policies</a></td>
+				<td><a href="#">Facebook</a></td>
+			</tr>
+			<tr>
+				<td><a href="/home">Home</a></td>
+				<td><a href="#">Deals</a></td>
+				<td><a href="#">Terms of Use</a></td>
+				<td><a href="#">Twitter</a></td>
+			</tr>
+			<tr>
+				<td><a href="/reviews">Reviews</a></td>
+				<td><a href="#">Offers</a></td>
+				<td><a href="#">Trip Ideas</a></td>
+				<td><a href="#">YouTube</a></td>
+			</tr>
+			<tr>
+				<td><a href="/about">About Us</a></td>
+				<td><a href="#">FAQ</a></td>
+				<td><a href="#">Privacy</a></td>
+			</tr>
+			<tr>
+				<td><a href="/gallery">Gallery</a></td>
+				<td><a href="#">Report</a></td>
+				<td><a href="#">Site Map</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">My Agent</a></td>
+				<td></td>
+				<td><a href="#">EPR Compilance</a></td>
+			</tr>
+			
+		</table>
+		<table border="1px" height="500px" width="1px" cellspacing="0" bordercolor="white" style="margin-left: 820px; margin-top: -500px;"></table>
+		<table border="0px" height="300px" width="400px" cellspacing="0" bordercolor="white" style="margin-left: 860px; margin-top: -480px;">
+			<tr><td>
+			<b><font color="red">Registered Office Address</font></b><br><br>
+				MakeMyPlan Private Limited,<br>
+				Buildings Alyssa, Begonia &<br>
+				Clove Embassy Tech Village,<br>
+				Outer Ring Road, Devarabeesanhali Village,<br>
+				Bengaluru, India<br>
+				CIN: D45678TH2021THB765992<br>
+				Telephone:<font color="blue"><b>1800 497 5678</b></font><br><br><br><br>
+				2010-2021 MakeMyPlan.com
+			</td></tr> 
+		</table>
+	</div>
+
+
+</body>
+</html>
