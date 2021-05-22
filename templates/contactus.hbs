@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Make_my_Plan/Contact_Us.com</title>
+	<link rel = "shortcut icon" type = "image" href = "/public/images/icon.jpg">
+	{{!-- <link rel="stylesheet" type="text/css" href="contact_us.css"> --}}
+</head>
+<style>
+    .navbar
+{
+	background-color: black;
+	border-radius: 10px;
+}
+.navbar ul
+{
+	overflow: auto;
+}
+.navbar li{
+	float: left;
+	list-style: none;
+	margin:13px 20px;
+}
+.navbar li a
+{
+	padding:3px 3px;
+	text-decoration: none;
+	color: white;
+}
+.navbar li a:hover{color: red;}
+.search
+{
+	float: right;
+	color: white;
+	padding:13px 20px;
+}
+.navbar input
+{
+	border:0px solid black;
+	border-radius: 8px;
+	padding: 3px 17px;
+	width: 250px;
+}
+.name
+{
+	font-family: "elephant";
+	margin-top: 50px;
+	margin-left: 550px;
+	font-size: 50px;
+	text-decoration: underline;
+	color: blue;
+	text-decoration-color: grey;
+}
+.img1
+{
+	margin-top: -350px;
+	margin-left: 870px;
+}
+.add
+{
+	margin-top: -65px;
+	margin-left: 950px;
+}
+.addcon
+{
+	margin-left: 910px;
+	margin-top: 03px;
+}
+.img2
+{
+	margin-top: 40px;
+	margin-left: 875px;
+}
+.email
+{
+	margin-left: 940px;
+	margin-top: -50px;
+}
+.emacon
+{
+	margin-left: 860px;
+	margin-top: 3px;
+}
+.img3
+{
+	margin-left: 875px;
+	margin-top: 55px;
+}
+.phone
+{
+	margin-left: 935px;
+	margin-top: -60px;
+}
+.phocon
+{
+	margin-top: 3px;
+	margin-left: 910px;
+}
+.bottom
+{
+	position: relative;
+	height:550px;
+	width:1326px;
+	border:1px solid black;
+	border-radius: 5px;
+	background-color: black;
+	margin-left: -8px;
+	font-family: "Arial";
+	color: white;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-top: 40px;
+}
+.bottom td a
+{
+	text-decoration: none;
+	color: white;
+}
+.bottom td a:hover
+{
+	color:blue;
+}
+.i1
+{
+	margin-left: 500px;
+	margin-top: -130px;
+}
+.i2
+{
+    margin-left: 970px;
+	margin-top: -140px;
+}
+</style>
+<body>
+	<header>
+		<nav class="navbar">
+			<ul>
+				<li><a href="/home">Home</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/gallery">Gallery</a></li>
+				<li><a href="/reviews">Reviews</a></li>
+				<li><a href="/contact">Contact Us</a></li>
+				<div class="search">
+					<input type="text" name="search" placeholder="Type here to search">
+				</div>
+			</ul>
+		</nav>
+	</header>
+	<name class="name">C<font color="grey">ontact</font> U<font color="grey">s</font></name>
+	<br>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.299690709632!2d77.566638914135!3d12.952665018799673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae157864e9c359%3A0x723d81abbc90106f!2sTravel%20Agency!5e0!3m2!1sen!2sin!4v1621001405049!5m2!1sen!2sin" width="600" height="400" style="border:0; outline: none; margin-left: 50px;margin-top: 50px;" allowfullscreen="" area-hidden="false" tabindex="0"></iframe>
+
+	<div class="img1">
+	<img src="/public/images/c1.jpg" height="80px" width="80px">
+	</div>
+	<div class="add">
+		<font color="blue" size="15"><b>A</font><font color="grey" size="15">ddresss</b></font>
+	</div>
+	<div class="addcon">
+		<font size="5">Bangalore,Karnatka<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp765922</font>
+	</div>
+	<div class="img2">
+		<img src="/public/images/c2.jpg" height="60px" width="60px">
+	</div>
+	<div class="email">
+		<font color="blue" size="15"><b>E</font><font color="grey" size="15">-mail</b></font>	
+	</div>
+	<div class="emacon">
+		<font size="5">makemyplan@gmail.com</font>
+	</div>
+	<div class="img3">
+		<img src="/public/images/c3.jpg" height="60" width="60">
+	</div>
+	<div class="phone">
+		<font color="blue" size="15"><b>P</font><font color="grey" size="15">hone</b></font>	
+	</div>
+	<div class="phocon">
+		<font size="5">1800 497 5678</font>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<form action="/contact" method="post" target="_blank">
+		<fieldset>
+			<legend><b>Get In Touch</b></legend>
+			<font size="5">
+			First Name:<input type="text" name="first_name" placeholder="Name here" required><br><br>
+			Last Name:<input type="text" name="last_name" placeholder="Name here" required><br><br>
+			No. of members:<input type="number" name="number"><br><br>
+			E-mail address:<input type="email" name="mail_address" required> 
+			<div class="i1"><img src="/public/images/c7.jpg" style="border-radius: 10px;"></div>
+			Select state you wish to visit: 
+				<select name="states">
+					<option>Select</option>
+					<option>Andhra Pradesh</option>
+					
+					
+					<option>Bihar</option>
+					<option>Chattisgarh</option>
+					
+					{{!-- <option>Goa</option> --}}
+					<option>Gujarat</option>
+					<option>Haryana</option>
+					<option>Himachal Pradesh</option>
+					<option>Jammu & Kashmir</option>
+					<option>Jharkhand</option>
+					<option>Karnatka</option>
+					<option>Kerala</option>
+					<option>Madhya Pradesh</option>
+					<option>Maharashtra</option>
+					
+					
+				
+				
+					<option>Odisha</option>
+					<option>Punjab</option>
+					<option>Rajasthan</option>
+					<option>Sikkim</option>
+					<option>Tamil Nadu</option>
+					<option>Telangana</option>
+					
+					<option>Uttar Pradesh</option>
+					<option>Uttarakhand</option>
+					<option>West Bengal</option>
+				</select><br><br>
+			Type of place you want info about :
+				<select name ="places">
+					<option>select</option>
+					<option>Monuments</option>
+					<option>Temples</option>
+					<option>National Parks</option>
+				</select><br><br>
+			
+			Date of departure:<input type="date" name="date_dep"><br><br>
+			Date of arrival back to your place:<input type="date" name="date_arr">
+			<div class="i2"><img src="/public/images/c8.jpg" style="border-radius: 10px;"></div>
+			I would like to recieve more newsletters from the site on my mail regarding offers and more trip ideas:<br><br>
+			<input type="radio" name="yes">Yes<br><br>
+			<input type="radio" name="no">No<br><br>
+			<input type="checkbox">I agree to all terms and conditions.<br><br>
+			<input type="reset">
+			<input type="submit">
+		</font>
+		</fieldset>
+	</form>
+	<br>
+	<hr>
+	<br>
+	<div class="bottom">
+		<table border="0px" width="800px" height="500px" cellspacing="0" bordercolor="red">
+			<tr>
+				<td><b><font color="red">ABOUT</font></b></td>
+				<td><b><font color="red">HELP</font></b></td>
+				<td><b><font color="red">POLICY</font></b></td>
+				<td><b><font color="red">SOCIAL</font></b></td>
+			</tr>
+			<tr>
+				<td><a href="/contact">Contact Us</a></td>
+				<td><a href="#">Featured</a></td>
+				<td><a href="#">Policies</a></td>
+				<td><a href="#">Facebook</a></td>
+			</tr>
+			<tr>
+				<td><a href="/home">Home</a></td>
+				<td><a href="#">Deals</a></td>
+				<td><a href="#">Terms of Use</a></td>
+				<td><a href="#">Twitter</a></td>
+			</tr>
+			<tr>
+				<td><a href="/reviews">Reviews</a></td>
+				<td><a href="#">Offers</a></td>
+				<td><a href="#">Trip Ideas</a></td>
+				<td><a href="#">YouTube</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">Stories</a></td>
+				<td><a href="#">FAQ</a></td>
+				<td><a href="#">Privacy</a></td>
+			</tr>
+			<tr>
+				<td><a href="/gallery">Gallery</a></td>
+				<td><a href="#">Report</a></td>
+				<td><a href="#">Site Map</a></td>
+			</tr>
+			<tr>
+				<td><a href="#">My Agent</a></td>
+				<td></td>
+				<td><a href="#">EPR Compilance</a></td>
+			</tr>
+			
+		</table>
+		<table border="1px" height="500px" width="1px" cellspacing="0" bordercolor="white" style="margin-left: 820px; margin-top: -500px;"></table>
+		<table border="0px" height="300px" width="400px" cellspacing="0" bordercolor="white" style="margin-left: 860px; margin-top: -480px;">
+			<tr><td>
+			<b><font color="red">Registered Office Address</font></b><br><br>
+				MakeMyPlan Private Limited,<br>
+				Buildings Alyssa, Begonia &<br>
+				Clove Embassy Tech Village,<br>
+				Outer Ring Road, Devarabeesanhali Village,<br>
+				Bengaluru, India<br>
+				CIN: D45678TH2021THB765992<br>
+				Telephone:<font color="blue"><b>1800 497 5678</b></font><br><br><br><br>
+				2010-2021 MakeMyPlan.com
+			</td></tr> 
+		</table>
+	</div>
+
+
+</body>
